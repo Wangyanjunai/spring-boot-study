@@ -36,7 +36,7 @@ public class Producer {
         try {
             this.producer.start();
         } catch (MQClientException e) {
-            e.printStackTrace();
+            log.error("出现错误", e);
         }
     }
 
@@ -50,5 +50,4 @@ public class Producer {
     public void shutdown(){
         this.producer.shutdown();
     }
-
 }
